@@ -1,0 +1,17 @@
+[Unit]
+Description=Nginx RTMP Streaming Service
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=/home/robot8/projects/TRIAGE/nginx_rtmp.sh start
+ExecStop=/home/robot8/projects/TRIAGE/nginx_rtmp.sh stop
+ExecReload=/home/robot8/projects/TRIAGE/nginx_rtmp.sh restart
+#PIDFile=/run/nginx.pid
+Restart=on-failure
+User=root
+WorkingDirectory=/usr/local/nginx
+Environment="PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+[Install]
+WantedBy=multi-user.target

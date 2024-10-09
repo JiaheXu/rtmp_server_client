@@ -1,0 +1,17 @@
+[Unit]
+Description=FFmpeg Stream Service for Triage
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/home/robot10/projects/TRIAGE2/stream.sh
+Restart=on-failure
+RestartSec=5
+StartLimitInterval=60
+StartLimitBurst=3
+User=triage
+Environment=DISPLAY=:0
+ExecStartPre=/bin/sleep 13
+
+[Install]
+WantedBy=multi-user.target
