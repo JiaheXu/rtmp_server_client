@@ -1,0 +1,5 @@
+# config.yaml
+video_file_path: "/home/starfish_admin/projects/TRIAGE2/logs/9-29-24/COURSE_1/2024-09-29_11.09.53_COURSE_1.mkv"
+subtitle_file_path: "/home/starfish_admin/projects/TRIAGE2/logs/9-29-24/COURSE_1/2024-09-29_11.09.53_COURSE_1.ass"
+telemetry_offset_seconds: -2  # Negative value means to delay telemetry publishing to match the streamed video feed.
+drone_id: "drone1"  # Namespace for topics
